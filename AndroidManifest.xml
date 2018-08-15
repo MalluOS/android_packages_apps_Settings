@@ -3293,5 +3293,19 @@
         </activity>
 
         <!-- This is the longest AndroidManifest.xml ever. -->
+
+        <!-- MalluOSSettings -->
+        <activity android:name=".Settings$MalluOSSettingsActivity"
+            android:label="@string/malluos_settings_title"
+            android:icon="@drawable/ic_homepage_malluossettings"
+            android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="69">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.malluos.settings.MalluOSSettings" />
+        </activity>
+
     </application>
 </manifest>
