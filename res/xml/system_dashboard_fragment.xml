@@ -21,6 +21,12 @@
     android:title="@string/header_category_system"
     settings:initialExpandedChildrenCount="4">
 
+    <!-- MalluOS Logo Header -->
+    <Preference 
+        android:key="malluos_logo"
+        android:order="-500"
+        android:layout="@layout/malluos_logo" />
+
     <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_preference_title"
