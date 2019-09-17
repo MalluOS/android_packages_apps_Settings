@@ -177,4 +177,8 @@
 
     <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">Saved Earbuds</string>
+
+    <!-- MalluOS Android version -->
+    <string name="malluos_version">MalluOS Version</string>
+
 </resources>
