@@ -12164,5 +12164,8 @@
     <!-- MalluOS Android version -->
     <string name="malluos_version">MalluOS Version</string>
     <string name="malluos_flav">MalluOS Flavour</string>
+
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
     
 </resources>
