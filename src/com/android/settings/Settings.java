@@ -180,4 +180,5 @@ public class Settings extends SettingsActivity {
 
     // MalluOS Additions.
     public static class MalluOSSettingsActivity extends SettingsActivity {}
+    public static class GamingModeActivity extends SettingsActivity {}
 }
