@@ -200,6 +200,17 @@
         android:layout_marginBottom="2dp"
         android:layout_marginStart="12dp"
         android:textColor="?android:attr/textColorSecondary"
-        android:text="@string/show_navbar_hint_summary"/>
+        android:text="@string/show_navbar_hint_summary" />
+
+    <Switch
+        android:id="@+id/gesture_pill_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/gesture_pill_message"
+        android:textColor="?android:attr/textColorSecondary" />
 
 </LinearLayout>

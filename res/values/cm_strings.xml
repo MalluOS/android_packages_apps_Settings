@@ -184,6 +184,9 @@
     <string name="malluos_version">MalluOS Version</string>
     <string name="malluos_flav">MalluOS Flavour</string>
 
+    <!-- NavigationBar Gestural Mode (Hide Pill) -->
+    <string name="gesture_pill_message">Hide the navigation bar pill for seamless fullscreen gestures.</string>
+
     <!-- categories -->
     <string name="apps_category">Apps</string>
     <string name="volume_key_category_title">Volume Shortcut</string>
