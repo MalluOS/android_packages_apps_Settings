@@ -41,7 +41,9 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
     private static final String TAG = "GestureNavigationBackSensitivityDialog";
     private static final String KEY_BACK_SENSITIVITY = "back_sensitivity";
 
-    public static void show(SystemNavigationGestureSettings parent, int sensitivity) {
+    private static final String KEY_HOME_HANDLE_SIZE = "home_handle_width";
+
+    public static void show(SystemNavigationGestureSettings parent, int sensitivity, int length) {
         if (!parent.isAdded()) {
             return;
         }
@@ -50,6 +52,7 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
                 new GestureNavigationBackSensitivityDialog();
         final Bundle bundle = new Bundle();
         bundle.putInt(KEY_BACK_SENSITIVITY, sensitivity);
+        bundle.putInt(KEY_HOME_HANDLE_SIZE, length);
         dialog.setArguments(bundle);
         dialog.setTargetFragment(parent, 0);
         dialog.show(parent.getFragmentManager(), TAG);
@@ -63,9 +66,11 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final View view = getActivity().getLayoutInflater().inflate(
-                R.layout.dialog_back_gesture_sensitivity, null);
-        final SeekBar sensitivitySeekBar = view.findViewById(R.id.back_sensitivity_seekbar);
-        sensitivitySeekBar.setProgress(getArguments().getInt(KEY_BACK_SENSITIVITY));
+                 R.layout.dialog_back_gesture_options, null);
+        final SeekBar seekBarSensitivity = view.findViewById(R.id.back_sensitivity_seekbar);
+        seekBarSensitivity.setProgress(getArguments().getInt(KEY_BACK_SENSITIVITY));
+        final SeekBar seekBarHandleSize = view.findViewById(R.id.home_handle_seekbar);
+        seekBarHandleSize.setProgress(getArguments().getInt(KEY_HOME_HANDLE_SIZE));
 
         final ContentResolver cr = getContext().getContentResolver();
         final int excludedPercentage = LineageSettings.Secure.getInt(cr,
@@ -79,13 +84,16 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
         hintSwitch.setChecked(isShowHintEnabled);
 
         return new AlertDialog.Builder(getContext())
-                .setTitle(R.string.edge_to_edge_navigation_title)
+                .setTitle(R.string.back_options_dialog_title)
                 .setView(view)
                 .setPositiveButton(R.string.okay, (dialog, which) -> {
-                    int sensitivity = sensitivitySeekBar.getProgress();
+                    int sensitivity = seekBarSensitivity.getProgress();
                     getArguments().putInt(KEY_BACK_SENSITIVITY, sensitivity);
+                    int length = seekBarHandleSize.getProgress();
+                    getArguments().putInt(KEY_HOME_HANDLE_SIZE, length);
                     SystemNavigationGestureSettings.setBackSensitivity(getActivity(),
                             getOverlayManager(), sensitivity);
+                    SystemNavigationGestureSettings.setHomeHandleSize(getActivity(), length);
 
                     int excludedTopPercentage = excludedTopSeekBar.getProgress();
                     LineageSettings.Secure.putInt(cr,
