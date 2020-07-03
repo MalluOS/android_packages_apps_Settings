@@ -181,4 +181,9 @@
     <!-- MalluOS Android version -->
     <string name="malluos_version">MalluOS Version</string>
 
+    <!-- categories -->
+    <string name="apps_category">Apps</string>
+    <string name="volume_key_category_title">Volume Shortcut</string>
+    <string name="connected_devices_category_title">Connected Devices</string>
+
 </resources>
