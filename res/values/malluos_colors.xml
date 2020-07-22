@@ -16,4 +16,7 @@
 -->
 <resources>
 
+    <!-- MalluOSSettings Color -->
+    <color name="homepage_malluos_background">#FF7E0F</color>
+
 </resources>
