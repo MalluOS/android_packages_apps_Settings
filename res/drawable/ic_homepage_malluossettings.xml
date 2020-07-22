@@ -19,7 +19,6 @@
 
     <item>
         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
-                android:color="@color/homepage_malluos_background"
                 android:width="@dimen/dashboard_tile_image_size"
                 android:height="@dimen/dashboard_tile_image_size" />
     </item>
