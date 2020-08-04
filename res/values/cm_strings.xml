@@ -182,6 +182,7 @@
 
     <!-- MalluOS Android version -->
     <string name="malluos_version">MalluOS Version</string>
+    <string name="malluos_flav">MalluOS Flavour</string>
 
     <!-- categories -->
     <string name="apps_category">Apps</string>
