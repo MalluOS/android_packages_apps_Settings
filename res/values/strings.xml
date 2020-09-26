@@ -12147,4 +12147,8 @@
     <string name="media_controls_no_players">No players available</string>
     <!-- Keywords for the media controls setting [CHAR LIMIT=NONE]-->
     <string name="keywords_media_controls">media</string>
+
+    <!-- MalluOS Android version -->
+    <string name="malluos_version">MalluOS Version</string>
+
 </resources>
