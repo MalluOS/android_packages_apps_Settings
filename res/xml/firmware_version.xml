@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- MalluOS logo -->
+    <PreferenceScreen
+        android:layout="@layout/malluos_logo"
+        android:key="malluos_logo"
+        android:selectable="false" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
@@ -30,21 +36,13 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
-    <!-- Lineage version -->
+    <!-- MalluOS Android version -->
     <Preference
-        android:key="lineage_version"
-        android:title="@*lineageos.platform:string/lineage_version"
+        android:key="malluos_version"
+        android:title="@string/malluos_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
-
-    <!-- Lineage API version -->
-    <Preference
-        android:key="lineage_api_version"
-        android:title="@*lineageos.platform:string/lineage_api_level"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageApiVersionPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.MalluOSAndroidVersionPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
