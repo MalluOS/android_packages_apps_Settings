@@ -240,4 +240,7 @@ public class Settings extends SettingsActivity {
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
 
+    // MalluOS Additions.
+    public static class MalluOSSettingsActivity extends SettingsActivity {}
+
 }
