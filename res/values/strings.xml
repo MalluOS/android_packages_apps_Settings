@@ -12182,5 +12182,11 @@
 
     <!-- Notification headers -->
     <string name="notification_headers_title">Notification Headers</string>
-    <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>    
+    <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
+
+    <!-- Navbar length -->
+    <string name="navbar_length">Gesture bar length</string>
+    <string name="short_label">Short</string>
+    <string name="long_label">Long</string>
+
 </resources>
