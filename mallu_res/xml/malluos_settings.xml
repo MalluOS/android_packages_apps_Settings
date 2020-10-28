@@ -74,13 +74,13 @@
             android:fragment="com.malluos.settings.fragments.GestureSettings"
             android:icon="@drawable/ic_settings_gestures"/>-->
 
-        <!-- Lock Screen
+        <!-- Lock Screen -->
         <com.malluos.settings.preferences.CardviewPreference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title"
             android:summary="@string/lockscreen_summary"
             android:fragment="com.malluos.settings.fragments.LockscreenSettings"
-            android:icon="@drawable/ic_settings_lockscreen"/>-->
+            android:icon="@drawable/ic_settings_lockscreen"/>
 
         <!-- Power Menu
         <com.malluos.settings.preferences.CardviewPreference
