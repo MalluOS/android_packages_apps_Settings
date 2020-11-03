@@ -22,7 +22,7 @@
     <string name="malluos_dashboard_summary">Made In Kerala</string>
     <string name="malluos_about_info">About MalluOS</string>
     <string name="malluos_about_info_summary_title">About Community</string>
-    <string name="malluos_about_info_summary">AOSP Based with Lineage Goodies</string>
+    <string name="malluos_about_info_summary">LineageOS Based with Our Goodies</string>
 
     <!-- Dev Info -->
     <string name="devs_header">Developers</string>
